@@ -92,7 +92,7 @@ install__deepdive_runtime_deps() {
                 ;;
         esac
     else
-        sudo add-apt-repository -y ppa:openjdk-r/ppa  # for openjdk-8
+        # sudo add-apt-repository -y ppa:openjdk-r/ppa  # for openjdk-8
         sudo apt-get update
     fi
     runtime_deps+=(
