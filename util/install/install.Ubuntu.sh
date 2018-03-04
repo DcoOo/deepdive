@@ -76,6 +76,7 @@ install__deepdive_build_deps() {
     )
     sudo apt-get install -qy "${build_deps[@]}"
     sudo localedef -i en_US -f UTF-8 en_US.UTF-8
+    echo "BUILD---------------------------------------"
 }
 
 install__deepdive_runtime_deps() {
@@ -92,6 +93,7 @@ install__deepdive_runtime_deps() {
                 ;;
         esac
     else
+        echo "PPA----------------------------------------"
         # sudo add-apt-repository -y ppa:openjdk-r/ppa  # for openjdk-8
         sudo apt-get update
     fi
@@ -115,6 +117,7 @@ install__deepdive_runtime_deps() {
     )
     sudo apt-get install -qy "${runtime_deps[@]}"
     sudo localedef -i en_US -f UTF-8 en_US.UTF-8
+    echo "RUNTIME----------------------------"
 }
 
 install_postgres_xl() {
